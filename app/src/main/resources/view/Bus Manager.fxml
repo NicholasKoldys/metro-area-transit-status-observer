@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import dev.nicholaskoldys.matso.controller.MenuBarController?>
+<?import javafx.scene.control.Hyperlink?>
+<?import dev.nicholaskoldys.matso.utility.SuggestionTextField?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/"
+            xmlns:fx="http://javafx.com/fxml/"
+            fx:controller="dev.nicholaskoldys.matso.controller.BusesController">
+   <children>
+      <MenuBarController fx:id="menuBar"/>
+
+      <HBox layoutX="21.0" layoutY="55.0" prefHeight="45.0" prefWidth="300.0">
+         <Label fx:id="busLabel" layoutX="21.0" layoutY="55.0" prefWidth="125.0" text="Bus:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+
+         <Label fx:id="routeLabel" layoutX="130.0" layoutY="55.0" prefWidth="125.0" text="Route:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+      </HBox>
+
+      <HBox layoutX="22.0" layoutY="110.0"
+            prefHeight="383.0" prefWidth="375.0">
+         <children>
+            <AnchorPane prefHeight="300.0" prefWidth="150.0">
+               <children>
+                  <Label layoutY="0.0" prefHeight="44.0" prefWidth="150.0"
+                         text="Bus Number" />
+                  <Label layoutY="57.0" prefHeight="44.0" prefWidth="150.0"
+                         text="Capacity" />
+                  <Label layoutY="114.0" prefHeight="44.0" prefWidth="150.0"
+                         text="Route Number" />
+                  <Label layoutY="171.0" prefHeight="44.0" prefWidth="150.0"
+                         text="Maintenance State" />
+                  <Label layoutY="228.0" prefHeight="44.0" prefWidth="150.0"
+                         text="Last Breakdown" />
+                  <Label layoutY="285.0" prefHeight="44.0" prefWidth="150.0"
+                         text="Route Record" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="300.0" prefWidth="200.0">
+               <children><!--onKeyTyped=""-->
+                  <TextField fx:id="busNumTextField" layoutY="0.0"
+                             prefHeight="44.0" prefWidth="200.0" />
+                  <TextField fx:id="capacityTextField" layoutY="57.0"
+                             prefHeight="44.0" prefWidth="200.0" />
+                  <SuggestionTextField fx:id="routeTextField" layoutY="114.0"
+                                       prefHeight="44.0" prefWidth="200.0" />
+                  <ComboBox fx:id="maintenanceStateComboBox" layoutY="171.0"
+                            prefHeight="44.0" prefWidth="200.0" />
+                  <SuggestionTextField fx:id="lastBreakdownTextField" layoutY="228.0"
+                                       prefHeight="44.0" prefWidth="200.0" />
+                  <Hyperlink fx:id="routeRecordHyperLink" text="Route Record Link" layoutY="285.0"
+                             prefHeight="44.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+
+
+
+      <Button fx:id="searchButton" layoutX="575.0" layoutY="54.0" mnemonicParsing="false"
+              prefHeight="44.0" prefWidth="85.0"
+              text="Search" />
+      <TextField fx:id="searchTextField" layoutX="665.0" layoutY="54.0"
+                 prefHeight="44.0" prefWidth="157.0" />
+
+
+
+      <TableView fx:id="busTableView" layoutX="380.0" layoutY="110.0"
+                 prefHeight="477.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="busNumCol" prefWidth="60.0" text="Bus" />
+          <TableColumn fx:id="capacityCol" prefWidth="50.0" text="Cap." />
+          <TableColumn fx:id="routeCol" prefWidth="95.0" text="Route" />
+          <TableColumn fx:id="maintenanceStateCol" prefWidth="75.0" text="M.State" />
+          <TableColumn fx:id="lastBreakdownCol" prefWidth="140.0" text="L.Breakdown" />
+        </columns>
+      </TableView>
+
+
+      <Button fx:id="addButton" layoutX="55.0" layoutY="470.0" mnemonicParsing="false"
+              prefHeight="44.0" prefWidth="85.0" text="Add" />
+      <Button fx:id="updateButton" layoutX="163.0" layoutY="470.0" mnemonicParsing="false"
+              prefHeight="44.0" prefWidth="85.0" text="Update" />
+      <Button fx:id="deleteButton" layoutX="274.0" layoutY="470.0" mnemonicParsing="false"
+              prefHeight="44.0" prefWidth="85.0" text="Delete" />
+      <Button fx:id="resetButton" layoutX="55.0" layoutY="523.0" mnemonicParsing="false"
+              prefHeight="44.0" prefWidth="85.0" text="Reset" />
+
+   </children>
+</AnchorPane>

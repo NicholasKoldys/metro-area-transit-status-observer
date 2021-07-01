@@ -21,3 +21,24 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Folder Project files
+WGU*/
+Capstone*.zip
+
+# Ignore Gradle project-specific cache directory
+.gradle
+.classpath
+
+# Ignore Gradle build output directory
+build
+bin
+
+# Intellij
+.idea/
+.settings
+.project
+
+# Project Specific
+DB_MATSO/
+MATSO_old/

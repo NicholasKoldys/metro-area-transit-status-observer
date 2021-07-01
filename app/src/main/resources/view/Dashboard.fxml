@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import dev.nicholaskoldys.matso.controller.MenuBarController?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<AnchorPane fx:id="mainAnchorPane"
+            maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="830.0"
+            xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/"
+            fx:controller="dev.nicholaskoldys.matso.controller.DashboardController">
+
+   <children>
+       <MenuBarController fx:id="menuBar"/>
+
+       <Label fx:id="currentDateLabel" layoutX="600.0" layoutY="35.0"
+              prefHeight="18.0" prefWidth="145.0" text="Date: MM/DD/YYYY" />
+       <Label fx:id="currentTimeLabel" layoutX="740" layoutY="35.0"
+              prefHeight="18.0" prefWidth="90.0" text="Time: HH:MI" />
+
+       <Button fx:id="searchBtn" layoutX="600.0" layoutY="65.0"
+              prefHeight="18.0" prefWidth="65.0"
+              text="Search" />
+       <TextField fx:id="searchTextField" layoutX="670" layoutY="65.0"
+                  prefHeight="20.0" prefWidth="150.0"/>
+
+      <TabPane layoutX="600.0" layoutY="103.0"
+               prefHeight="482.0" prefWidth="230.0"
+               tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Buses">
+            <content>
+                <TableView fx:id="busTableView">
+                    <columns>
+                        <TableColumn fx:id="busNumCol" prefWidth="60.0" text="Bus" />
+                        <TableColumn fx:id="routeCol" prefWidth="75.0" text="Route" />
+                        <TableColumn fx:id="maintenanceStateCol" prefWidth="75.0" text="M.State" />
+                    </columns>
+                </TableView>
+            </content>
+          </Tab>
+          <Tab text="Routes">
+            <content>
+                <TableView fx:id="routeTableView">
+                    <columns>
+                        <TableColumn fx:id="routeNumCol" prefWidth="60.0" text="Route" />
+                        <TableColumn fx:id="timeLengthCol" prefWidth="50.0" text="Length" />
+                        <TableColumn fx:id="distanceCol" prefWidth="50.0" text="Distance" />
+                        <TableColumn fx:id="delayCol" prefWidth="50.0" text="Delay" />
+                    </columns>
+                </TableView>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+
+      <PieChart fx:id="busMaintenanceStatusPieChart" legendSide="BOTTOM" legendVisible="true"
+                layoutX="-25.0" layoutY="28.0"
+                prefHeight="300.0" prefWidth="300.0" />
+       <!--was bus availability-->
+
+      <ScatterChart fx:id="customerAvgAndBusCapacityScatterChart"
+                    layoutX="14.0" layoutY="325.0"
+                    prefHeight="284.0" prefWidth="580.0">
+        <xAxis>
+          <NumberAxis fx:id="customerAvgAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="totalCapacityAxis" side="LEFT" />
+        </yAxis>
+      </ScatterChart>
+       <!--was bus passengers capacity per month-->
+
+      <StackedBarChart fx:id="routeTimeStatsBarChart"
+                       layoutX="230.0" layoutY="52.0"
+                       prefHeight="285.0" prefWidth="370.0">
+        <xAxis>
+            <CategoryAxis fx:id="routeNumAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="timeDurationAxis" side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+       <!--was active buses per month-->
+
+      <!--<Label layoutX="173.0" layoutY="282.0" text="Bus Passengers Capacity Per Month" />
+      <Label layoutX="89.0" layoutY="34.0" text="Bus Availability" />
+      <Label layoutX="320.0" layoutY="34.0" text="Active Buses Per Month" />-->
+
+   </children>
+</AnchorPane>

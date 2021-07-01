@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+
+
+<fx:root type="MenuBar"
+         layoutY="1.0" prefHeight="25.0" prefWidth="830.0"
+         xmlns="http://javafx.com/javafx/"
+         xmlns:fx="http://javafx.com/fxml/">
+    <!--fx:controller="dev.nicholaskoldys.matso.controller.MenuBarController"-->
+   <menus>
+      <Menu fx:id="dashboardItem" mnemonicParsing="false" text="Dashboard" />
+      <Menu fx:id="manageMenu" mnemonicParsing="false" text="Manage">
+        <items>
+          <MenuItem fx:id="busesItem" mnemonicParsing="false" text="Buses" />
+            <MenuItem fx:id="routesItem" mnemonicParsing="false" text="Routes" />
+        </items>
+      </Menu>
+      <Menu fx:id="reportsItem" mnemonicParsing="false" text="Reports" />
+      <!--<Menu mnemonicParsing="false" text="Help">
+        <items>
+          <MenuItem fx:id="aboutItem" mnemonicParsing="false" text="About" />
+        </items>
+      </Menu>-->
+   </menus>
+</fx:root>

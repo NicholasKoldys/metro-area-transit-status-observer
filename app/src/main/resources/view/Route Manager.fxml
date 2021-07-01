@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import dev.nicholaskoldys.matso.controller.MenuBarController?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/"
+            xmlns:fx="http://javafx.com/fxml/"
+            fx:controller="dev.nicholaskoldys.matso.controller.RoutesController">
+    <children>
+        <MenuBarController fx:id="menuBar"/>
+
+        <Label fx:id="routeLabel" layoutX="21.0" layoutY="55.0" text="Route:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+
+
+
+        <HBox layoutX="22.0" layoutY="110.0"
+              prefHeight="444.0" prefWidth="375.0">
+            <children>
+                <AnchorPane prefHeight="444.0" prefWidth="150.0">
+                    <children>
+                        <Label layoutY="0.0" prefHeight="44.0" prefWidth="150.0"
+                               text="Route Number" />
+                        <Label layoutY="57.0" prefHeight="44.0" prefWidth="150.0"
+                               text="Start Point" />
+                        <Label layoutY="114.0" prefHeight="44.0" prefWidth="150.0"
+                               text="End Point" />
+                        <Label layoutY="171.0" prefHeight="44.0" prefWidth="150.0"
+                               text="Stops Total" />
+                        <Label layoutY="228.0" prefHeight="44.0" prefWidth="150.0"
+                               text="Time Length" />
+                        <Label layoutY="285.0" prefHeight="44.0" prefWidth="150.0"
+                               text="Distance" />
+                        <Label layoutY="342.0" prefHeight="44.0" prefWidth="150.0"
+                               text="Current Delay" />
+                        <Label layoutY="399.0" prefHeight="44.0" prefWidth="150.0"
+                               text="Customers Average" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="444.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="routeNumTextField" layoutY="0.0"
+                                   prefHeight="44.0" prefWidth="200.0" />
+                        <TextField fx:id="startPointTextField" layoutY="57.0"
+                                   prefHeight="44.0" prefWidth="200.0" />
+                        <TextField fx:id="endPointTextField" layoutY="114.0"
+                                   prefHeight="44.0" prefWidth="200.0" />
+                        <TextField fx:id="stopsTotalTextField" layoutY="171.0"
+                                   prefHeight="44.0" prefWidth="200.0" />
+                        <TextField fx:id="timeLengthTextField" layoutY="228.0"
+                                   prefHeight="44.0" prefWidth="200.0" />
+                        <TextField fx:id="distanceTextField" layoutY="285.0"
+                                   prefHeight="44.0" prefWidth="200.0" />
+                        <TextField fx:id="currentDelayTextField" layoutY="342.0"
+                                   prefHeight="44.0" prefWidth="200.0" />
+                        <TextField fx:id="customersAvgTextField" layoutY="399.0"
+                                   prefHeight="44.0" prefWidth="200.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+
+
+
+        <Button fx:id="searchButton" layoutX="575.0" layoutY="54.0" mnemonicParsing="false"
+                prefHeight="44.0" prefWidth="85.0"
+                text="Search" />
+        <TextField fx:id="searchTextField" layoutX="665.0" layoutY="54.0"
+                   prefHeight="44.0" prefWidth="157.0" />
+
+
+
+        <TableView fx:id="routeTableView" layoutX="380.0" layoutY="110.0"
+                   prefHeight="580.0" prefWidth="450.0">
+            <columns>
+                <TableColumn fx:id="routeNumCol" prefWidth="60.0" text="Route" />
+                <TableColumn fx:id="startCol" prefWidth="78.0" text="Start" />
+                <TableColumn fx:id="endCol" prefWidth="78.0" text="End" />
+                <TableColumn fx:id="stopsCol" prefWidth="45.0" text="Stops" />
+                <TableColumn fx:id="timeLengthCol" prefWidth="45.0" text="T.Length" />
+                <TableColumn fx:id="distanceCol" prefWidth="45.0" text="Distance" />
+                <TableColumn fx:id="delayCol" prefWidth="45.0" text="Delay" />
+                <TableColumn fx:id="custAvgCol" prefWidth="45.0" text="Cust.Avg" />
+            </columns>
+        </TableView>
+
+
+
+        <Button fx:id="addButton" layoutX="55.0" layoutY="575.0" mnemonicParsing="false"
+                prefHeight="44.0" prefWidth="85.0" text="Add" />
+        <Button fx:id="updateButton" layoutX="163.0" layoutY="575.0" mnemonicParsing="false"
+                prefHeight="44.0" prefWidth="85.0" text="Update" />
+        <!--<Button fx:id="deleteButton" layoutX="274.0" layoutY="575.0" mnemonicParsing="false"
+                prefHeight="44.0" prefWidth="85.0" text="Delete" />-->
+        <Button fx:id="resetButton" layoutX="55.0" layoutY="628.0" mnemonicParsing="false"
+                prefHeight="44.0" prefWidth="85.0" text="Reset" />
+
+    </children>
+</AnchorPane>

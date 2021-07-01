@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<?import dev.nicholaskoldys.matso.controller.MenuBarController?>
+<AnchorPane prefHeight="600.0" prefWidth="830.0"
+            xmlns="http://javafx.com/javafx/"
+            xmlns:fx="http://javafx.com/fxml/"
+            fx:controller="dev.nicholaskoldys.matso.controller.ReportsController">
+   <children>
+       <MenuBarController fx:id="menuBar" />
+
+      <ChoiceBox fx:id="reportChoiceBox"
+                 layoutX="14.0" layoutY="36.0"
+                 prefHeight="35.0" prefWidth="195.0" />
+
+      <Label fx:id="reportLabel"
+             alignment="CENTER" contentDisplay="CENTER"
+             layoutX="333.0" layoutY="36.0"
+             prefHeight="35.0" prefWidth="163.0"
+             text="Records">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+
+      <Button fx:id="searchButton"
+              layoutX="575.0" layoutY="40.0"
+              mnemonicParsing="false" prefHeight="28.0"
+              prefWidth="73.0" text="Search" />
+      <TextField fx:id="searchTextField"
+                 layoutX="660.0" layoutY="40.0"
+                 prefHeight="28.0" prefWidth="156.0" />
+
+      <TabPane layoutX="14.0" layoutY="82.0" prefHeight="513.0" prefWidth="802.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab1" text="Table">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <!--<TableView fx:id="reportTable" layoutY="1.0" prefHeight="481.0" prefWidth="802.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>-->
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
