@@ -1,6 +1,6 @@
 ## How To Run the application.
 
-If you are just interested in running the project quickly, you can use the following commands in your cli to run the application..
+If you are just interested in running the project quickly, you can use the following commands in your command line to run the application..
 ```
 cd "metro-area-transit-status-observer"
 ```
