@@ -1,1 +1,1 @@
-![wireframes](img\app-wireframes.svg)
+![wireframes](img/app-wireframes.svg)
