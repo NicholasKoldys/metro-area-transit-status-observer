@@ -54,7 +54,7 @@
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="300.0" prefWidth="200.0">
-               <children><!--onKeyTyped=""-->
+               <children>
                   <TextField fx:id="busNumTextField" layoutY="0.0"
                              prefHeight="44.0" prefWidth="200.0" />
                   <TextField fx:id="capacityTextField" layoutY="57.0"

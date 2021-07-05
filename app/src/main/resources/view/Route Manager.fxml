@@ -96,8 +96,6 @@
                 prefHeight="44.0" prefWidth="85.0" text="Add" />
         <Button fx:id="updateButton" layoutX="163.0" layoutY="575.0" mnemonicParsing="false"
                 prefHeight="44.0" prefWidth="85.0" text="Update" />
-        <!--<Button fx:id="deleteButton" layoutX="274.0" layoutY="575.0" mnemonicParsing="false"
-                prefHeight="44.0" prefWidth="85.0" text="Delete" />-->
         <Button fx:id="resetButton" layoutX="55.0" layoutY="628.0" mnemonicParsing="false"
                 prefHeight="44.0" prefWidth="85.0" text="Reset" />
 
