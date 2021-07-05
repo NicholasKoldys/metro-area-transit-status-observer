@@ -28,7 +28,7 @@ or if you are using windows, you can simply run the windows .bat script by doubl
 <br />
 
 To view a quick video running the app - Please follow the link: <br /> 
-[Video and picture demo of this project](project-documents/demo.md)
+[Video and picture demo of this project](demo/demo.md)
 
 <br />
 
