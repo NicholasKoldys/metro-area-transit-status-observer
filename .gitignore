@@ -31,8 +31,8 @@ Capstone*.zip
 .classpath
 
 # Ignore Gradle build output directory
-build
-bin
+build/
+bin/
 
 # Intellij
 .idea/
@@ -42,3 +42,6 @@ bin
 # Project Specific
 DB_MATSO/
 MATSO_old/
+
+# VSCODE
+.vscode/

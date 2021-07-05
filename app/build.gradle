@@ -1,7 +1,9 @@
 plugins {
     id 'application'
-    id 'org.openjfx.javafxplugin' version "0.0.10"
+    id 'org.openjfx.javafxplugin' version '0.0.10'
 }
+
+version = "1.0"
 
 repositories {
     jcenter()
@@ -10,26 +12,20 @@ repositories {
 
 dependencies {
     testImplementation 'junit:junit:4.13'
-
-    // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
-
-    compile "org.hsqldb:hsqldb:2.3.2"
+    compile 'org.hsqldb:hsqldb:2.3.2'
 }
 
 application {
     mainClass = 'dev.nicholaskoldys.matso.MATSOApplicationMain'
 }
 
+sourceCompatibility = 15
+targetCompatibility = 15
+
+version = '1.0'
+
 javafx {
-    //version = "15.0.1"
+    version = "15"
     modules = [ 'javafx.controls', 'javafx.fxml']
 }
-
-// jar {
-//     manifest {
-//         attributes {
-//             mainClass = 'dev.nicholaskoldys.matso.MATSOApplicationMain'
-//         }
-//     }
-// }
