@@ -1,4 +1,7 @@
 # MATSO - Metro Area Transit Status Observer 
+
+Java Customer Management System Prototype, mvc pattern, dashboard GUI, statistical graphs on user data, seperation of user privileges (high > low), repository data access, with backend database through SQL queries.
+
 ## WGU Project 2020
 ## Developed By : @NicholasKoldys
 
